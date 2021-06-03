@@ -78,7 +78,7 @@ body {
 
 .inputDivision, .outputDivision, .executionDivision {
     color: #464646;
-    top:11%;
+    /*top:11%;*/
     height:87%; 
     position: absolute;
     border:1px solid #CCC;
