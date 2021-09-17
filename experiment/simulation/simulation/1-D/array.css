@@ -80,6 +80,7 @@ body {
 }
 
 .inputDivision, .outputDivision, .executionDivision {
+    top: 11%;
     height: 87%; 
     position: absolute;
     border: 1px solid #CCC;
@@ -127,7 +128,7 @@ body {
 .initializePic {
 	margin-top: 1.5vh;
 	width: 20%;
-	background-image: url('../images/initIcon.png');
+	background-image: url('initIcon.png');
 }
 
 .initializeText {
@@ -140,7 +141,7 @@ body {
 .executionPic {
 	margin-top: 1vh;
 	width: 25%;
-	background-image: url('../images/pageIcon.png');
+	background-image: url('pageIcon.png');
 }
 
 .executionText {
@@ -154,7 +155,7 @@ body {
 .outputPic {
 	margin-top: 1.6vh;
 	width: 25%;
-	background-image: url('../images/outputIcon.png');
+	background-image: url('outputIcon.png');
 }
 
 .outputText {
@@ -481,7 +482,7 @@ body {
 }
 
 .arrowImage {
-    content: url('../images/arrow.png');
+    content: url('arrow.png');
 }
 
 }
@@ -532,7 +533,7 @@ body {
 }
 
 .arrowImage {
-    content: url('../images/arrowSmall.png');
+    content: url('arrowSmall.png');
 }
 
 }
