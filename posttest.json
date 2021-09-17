@@ -1,0 +1,32 @@
+[
+{"question":"The memory address of the first element of an array is called",
+"answers":{
+            "a":"Floor address",
+            "b":"Foundation address",
+            "c":"First address",
+            "d":"Base address"
+          },
+ "correctAnswer":"d"},
+    {"question":"The memory allocation for array elements is done",
+"answers":{
+            "a":"Contigously",
+            "b":"Randomly"
+          },
+     "correctAnswer":"a"},
+    {"question":"If the memory address of the first element of an array is 2000, what is the memory address of the 6th emement",
+"answers":{
+            "a":"2020",
+            "b":"2012",
+            "c":"2006",
+            "d":"2024"
+          },
+"correctAnswer":"a"},
+{"question":"In C programming, a string is actually a",
+"answers":{
+            "a":"Array of integers",
+            "b":"Array of characters",
+            "c":"Variable",
+            "d":"None of the above"
+          },
+"correctAnswer":"b"} 
+]
