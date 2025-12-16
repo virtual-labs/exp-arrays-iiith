@@ -1,32 +1,69 @@
-[
-{"question":"The memory address of the first element of an array is called",
-"answers":{
-            "a":"Floor address",
-            "b":"Foundation address",
-            "c":"First address",
-            "d":"Base address"
-          },
- "correctAnswer":"d"},
-    {"question":"The memory allocation for array elements is done",
-"answers":{
-            "a":"Contigously",
-            "b":"Randomly"
-          },
-     "correctAnswer":"a"},
-    {"question":"If the memory address of the first element of an array is 2000, what is the memory address of the 6th emement",
-"answers":{
-            "a":"2020",
-            "b":"2012",
-            "c":"2006",
-            "d":"2024"
-          },
-"correctAnswer":"a"},
-{"question":"In C programming, a string is actually a",
-"answers":{
-            "a":"Array of integers",
-            "b":"Array of characters",
-            "c":"Variable",
-            "d":"None of the above"
-          },
-"correctAnswer":"b"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The memory address of the first element of an array is called",
+      "answers": {
+        "a": "Floor address",
+        "b": "Foundation address",
+        "c": "First address",
+        "d": "Base address"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. This is not the standard terminology used in computer science for array memory addressing.",
+        "b": "Incorrect. While conceptually similar, 'foundation address' is not the correct technical term.",
+        "c": "Incorrect. Although descriptive, this is not the proper terminology used in programming.",
+        "d": "Correct. The memory address of the first element of an array is called the base address, which serves as the reference point for calculating addresses of all other elements."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The memory allocation for array elements is done",
+      "answers": {
+        "a": "Contiguously",
+        "b": "Randomly"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Array elements are stored in contiguous (consecutive) memory locations, which allows for efficient access using index-based calculations.",
+        "b": "Incorrect. Random memory allocation would make it impossible to calculate element addresses using simple mathematical formulas based on indices."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the memory address of the first element of an array is 2000, what is the memory address of the 6th element?",
+      "answers": {
+        "a": "2020",
+        "b": "2012",
+        "c": "2006",
+        "d": "2024"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Assuming 4-byte integers (standard size), the 6th element is at index 5. Using the formula: 2000 + (5 × 4) = 2020.",
+        "b": "Incorrect. This would be the address if using a smaller data type or miscalculating the index.",
+        "c": "Incorrect. This calculation doesn't account for the proper size of integer data types.",
+        "d": "Incorrect. This would be the address of the 7th element (index 6): 2000 + (6 × 4) = 2024."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In C programming, a string is actually a",
+      "answers": {
+        "a": "Array of integers",
+        "b": "Array of characters",
+        "c": "Variable",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Strings represent text, not numeric values, so they cannot be arrays of integers.",
+        "b": "Correct. In C programming, a string is implemented as an array of characters, terminated by a null character ('\\0').",
+        "c": "Incorrect. While a string can be stored in a variable, the underlying data structure is an array of characters, not just a simple variable.",
+        "d": "Incorrect. Strings are indeed arrays of characters in C programming."
+      },
+      "difficulty": "beginner"
+    }
+  ]
+}

@@ -1,27 +1,56 @@
-[
-{"question":"1. In C programming, Arr[1] refers to which element of an array Arr.",
-"answers":{
-            "a":"1",
-            "b":"2",
-            "c":"3",
-            "d":"0"
-          },
-"correctAnswer":"b"},
-
-    {"question":"2. The first element of an array is referred to by which index",
-"answers":{
-            "a":"1",
-            "b":"2",
-            "c":"3",
-            "d":"0"
-          },
-"correctAnswer":"d"},
-    {"question":"3. The index of the last element of an array of size n elements is:",
-"answers":{
-            "a":"n",
-            "b":"n-1",
-            "c":"n+1",
-            "d":"n-2"
-          },
-"correctAnswer":"b"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In C programming, Arr[1] refers to which element of an array Arr.",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "0"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This would be true only if array indexing started from 1, which it doesn't in C programming.",
+        "b": "Correct. In C programming, arrays use zero-based indexing, so Arr[1] refers to the second element of the array.",
+        "c": "Incorrect. Arr[1] refers to a much earlier element in the array sequence.",
+        "d": "Incorrect. This would be the first element, which is accessed using Arr[0]."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The first element of an array is referred to by which index?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "0"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. While some programming languages use 1-based indexing, C uses zero-based indexing.",
+        "b": "Incorrect. Index 2 refers to the third element of the array.",
+        "c": "Incorrect. Index 3 refers to the fourth element of the array.",
+        "d": "Correct. In C programming, array indexing starts from 0, so the first element is always accessed using index 0."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The index of the last element of an array of size n elements is:",
+      "answers": {
+        "a": "n",
+        "b": "n-1",
+        "c": "n+1",
+        "d": "n-2"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Using index n would result in an out-of-bounds error as it exceeds the valid index range.",
+        "b": "Correct. Since arrays use zero-based indexing (starting from 0), an array of size n has indices from 0 to n-1, making n-1 the last valid index.",
+        "c": "Incorrect. This index is beyond the array bounds and would cause an error.",
+        "d": "Incorrect. This would be the second-to-last element, not the last element."
+      },
+      "difficulty": "beginner"
+    }
+  ]
+}

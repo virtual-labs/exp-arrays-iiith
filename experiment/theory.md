@@ -58,4 +58,4 @@ int main()
 }
 </pre>
 
-Note how easy arrays make to find out the neighboring elements of any number. Writing a equivalent program by replacing arr[10] with 10 different variables will require a very complex program having many if else conditions or a switch statement with many cases. Try imagining a case having 100 or 1000 such variables.
+Note how easy arrays make to find out the neighboring elements of any number. Writing an equivalent program by replacing arr[10] with 10 different variables will require a very complex program having many if else conditions or a switch statement with many cases. Try imagining a case having 100 or 1000 such variables.
