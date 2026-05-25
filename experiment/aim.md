@@ -1,15 +1,21 @@
-An array is a group of items which have similar nature.
+Aim of this experiment is to understand the concept, declaration, and usage of arrays in computer programming, and to learn how arrays can be used to efficiently store, access, and manipulate collections of data of the same type.
 
-Arrays play a significant role in any programming language, as they allow the programmer to store more than one value in a variable. That is, you can use the same variable name to refer to all the values. An array is analogous to a shelf with many identical compartments. To identify a compartment, you just need to specify its position. Similarly, in an array variable, you can store many values of a single datatype. For example: 10 integers, 4 floating numbers, 12 characters etc. Not surprisingly, an array variable takes larger memory than a single variable of a datatype.
+Arrays are fundamental data structures that allow programmers to store multiple values under a single variable name, with each value accessible by its index. For example, an integer array can store a sequence of numbers such as students' marks, sensor readings, or any list of values.
 
-We can use the same name to access the values, but how do we differentiate between them? To do this we use an index into the array. For example, take an array(myArray) of 100 integers, we can access the hundredth unit:
+**Example:**
 
-myArray[99] = 3;
+Suppose we declare an integer array in C:
 
-Notice something unusual? The index is usually zero based. So, the hundredth element is shown accessed using [99]. In other words, the index to the first item is at [0] and the index to the last item is [#elements -1].
+```c
 
-#### Objective
+int myArray[5];
+myArray[0] = 10;
+myArray[1] = 20;
+myArray[2] = 30;
+myArray[3] = 40;
+myArray[4] = 50;
+```
 
-1. To learn how to use arrays for storing large amount of data.
-2. To learn how to use array to create a common reference for a large number of variables.
+Here, `myArray` can store 5 integers. The first element is accessed with index 0, and the last element with index 4 (since array indices start from 0). In general, for an array of size $n$, the valid indices are $0$ to $n-1$.
 
+Arrays are like shelves with numbered compartments, where each compartment (index) holds a value. This makes it easy to process large amounts of data using loops and algorithms.

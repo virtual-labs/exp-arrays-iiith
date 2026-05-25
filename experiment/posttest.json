@@ -4,17 +4,17 @@
     {
       "question": "The memory address of the first element of an array is called",
       "answers": {
-        "a": "Floor address",
-        "b": "Foundation address",
-        "c": "First address",
-        "d": "Base address"
+        "a": "Base address",
+        "b": "First address",
+        "c": "Floor address",
+        "d": "Foundation address"
       },
-      "correctAnswer": "d",
+      "correctAnswer": "a",
       "explanations": {
-        "a": "Incorrect. This is not the standard terminology used in computer science for array memory addressing.",
-        "b": "Incorrect. While conceptually similar, 'foundation address' is not the correct technical term.",
-        "c": "Incorrect. Although descriptive, this is not the proper terminology used in programming.",
-        "d": "Correct. The memory address of the first element of an array is called the base address, which serves as the reference point for calculating addresses of all other elements."
+        "a": "Correct. The memory address of the first element of an array is called the base address, which serves as the reference point for calculating addresses of all other elements.",
+        "b": "Incorrect. Although descriptive, this is not the proper terminology used in programming.",
+        "c": "Incorrect. This is not the standard terminology used in computer science for array memory addressing.",
+        "d": "Incorrect. While conceptually similar, 'foundation address' is not the correct technical term."
       },
       "difficulty": "beginner"
     },
@@ -22,28 +22,32 @@
       "question": "The memory allocation for array elements is done",
       "answers": {
         "a": "Contiguously",
-        "b": "Randomly"
+        "b": "Randomly",
+        "c": "Sporadically",
+        "d": "None of the above"
       },
       "correctAnswer": "a",
       "explanations": {
         "a": "Correct. Array elements are stored in contiguous (consecutive) memory locations, which allows for efficient access using index-based calculations.",
-        "b": "Incorrect. Random memory allocation would make it impossible to calculate element addresses using simple mathematical formulas based on indices."
+        "b": "Incorrect. Random memory allocation would make it impossible to calculate element addresses using simple mathematical formulas based on indices.",
+        "c": "Incorrect. 'Sporadically' is not a technical term for memory allocation.",
+        "d": "Incorrect. The correct answer is 'Contiguously'."
       },
       "difficulty": "beginner"
     },
     {
       "question": "If the memory address of the first element of an array is 2000, what is the memory address of the 6th element?",
       "answers": {
-        "a": "2020",
+        "a": "2006",
         "b": "2012",
-        "c": "2006",
+        "c": "2020",
         "d": "2024"
       },
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "explanations": {
-        "a": "Correct. Assuming 4-byte integers (standard size), the 6th element is at index 5. Using the formula: 2000 + (5 × 4) = 2020.",
+        "a": "Incorrect. This calculation doesn't account for the proper size of integer data types.",
         "b": "Incorrect. This would be the address if using a smaller data type or miscalculating the index.",
-        "c": "Incorrect. This calculation doesn't account for the proper size of integer data types.",
+        "c": "Correct. Assuming 4-byte integers (standard size), the 6th element is at index 5. Using the formula: 2000 + (5 × 4) = 2020.",
         "d": "Incorrect. This would be the address of the 7th element (index 6): 2000 + (6 × 4) = 2024."
       },
       "difficulty": "intermediate"
@@ -51,19 +55,53 @@
     {
       "question": "In C programming, a string is actually a",
       "answers": {
-        "a": "Array of integers",
-        "b": "Array of characters",
-        "c": "Variable",
-        "d": "None of the above"
+        "a": "Array of characters",
+        "b": "Array of integers",
+        "c": "None of the above",
+        "d": "Variable"
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "explanations": {
-        "a": "Incorrect. Strings represent text, not numeric values, so they cannot be arrays of integers.",
-        "b": "Correct. In C programming, a string is implemented as an array of characters, terminated by a null character ('\\0').",
-        "c": "Incorrect. While a string can be stored in a variable, the underlying data structure is an array of characters, not just a simple variable.",
-        "d": "Incorrect. Strings are indeed arrays of characters in C programming."
+        "a": "Correct. In C programming, a string is implemented as an array of characters, terminated by a null character ('\\0').",
+        "b": "Incorrect. Strings represent text, not numeric values, so they cannot be arrays of integers.",
+        "c": "Incorrect. Strings are indeed arrays of characters in C programming.",
+        "d": "Incorrect. While a string can be stored in a variable, the underlying data structure is an array of characters, not just a simple variable."
       },
       "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following statements about multidimensional arrays in C is correct?",
+      "answers": {
+        "a": "All rows must have the same number of columns.",
+        "b": "Each row can have a different number of columns.",
+        "c": "Arrays can only be one-dimensional in C.",
+        "d": "Arrays in C cannot store integers."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In C, all rows in a multidimensional array must have the same number of columns.",
+        "b": "Incorrect. C does not support jagged arrays as built-in arrays; all rows must have the same number of columns.",
+        "c": "Incorrect. C supports multidimensional arrays.",
+        "d": "Incorrect. Arrays in C can store integers and other data types."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Suppose you want to reverse an array of n elements in place. What is the time complexity of this operation?",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(log n)",
+        "c": "O(n)",
+        "d": "O(n^2)"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Reversing an array requires visiting each element at least once.",
+        "b": "Incorrect. O(log n) is not sufficient for reversing all elements.",
+        "c": "Correct. Each element must be swapped, so the time complexity is O(n).",
+        "d": "Incorrect. O(n^2) is not required for reversing an array."
+      },
+      "difficulty": "advanced"
     }
   ]
 }
