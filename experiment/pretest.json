@@ -1,27 +1,107 @@
-[
-{"question":"1. In C programming, Arr[1] refers to which element of an array Arr.",
-"answers":{
-            "a":"1",
-            "b":"2",
-            "c":"3",
-            "d":"0"
-          },
-"correctAnswer":"b"},
-
-    {"question":"2. The first element of an array is referred to by which index",
-"answers":{
-            "a":"1",
-            "b":"2",
-            "c":"3",
-            "d":"0"
-          },
-"correctAnswer":"d"},
-    {"question":"3. The index of the last element of an array of size n elements is:",
-"answers":{
-            "a":"n",
-            "b":"n-1",
-            "c":"n+1",
-            "d":"n-2"
-          },
-"correctAnswer":"b"} 
-]
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. In C programming, Arr[1] refers to which element of an array Arr?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "0"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This would be true only if array indexing started from 1, which it doesn't in C programming.",
+        "b": "Correct. In C programming, arrays use zero-based indexing, so Arr[1] refers to the second element of the array.",
+        "c": "Incorrect. Arr[1] refers to a much earlier element in the array sequence.",
+        "d": "Incorrect. This would be the first element, which is accessed using Arr[0]."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The first element of an array is referred to by which index?",
+      "answers": {
+        "a": "0",
+        "b": "1",
+        "c": "2",
+        "d": "3"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In C programming, array indexing starts from 0, so the first element is always accessed using index 0.",
+        "b": "Incorrect. While some programming languages use 1-based indexing, C uses zero-based indexing.",
+        "c": "Incorrect. Index 2 refers to the third element of the array.",
+        "d": "Incorrect. Index 3 refers to the fourth element of the array."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. The index of the last element of an array of size n elements is:",
+      "answers": {
+        "a": "n",
+        "b": "n-1",
+        "c": "n+1",
+        "d": "n-2"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Using index n would result in an out-of-bounds error as it exceeds the valid index range.",
+        "b": "Correct. Since arrays use zero-based indexing (starting from 0), an array of size n has indices from 0 to n-1, making n-1 the last valid index.",
+        "c": "Incorrect. This index is beyond the array bounds and would cause an error.",
+        "d": "Incorrect. This would be the second-to-last element, not the last element."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following is a valid way to declare a 2D array in C?",
+      "answers": {
+        "a": "int arr[5,5];",
+        "b": "int arr[5][5];",
+        "c": "int arr(5,5);",
+        "d": "array int arr[5][5];"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This is not valid C syntax for declaring a 2D array.",
+        "b": "Correct. int arr[5][5]; is the correct way to declare a 2D array in C.",
+        "c": "Incorrect. Parentheses are not used for array declaration in C.",
+        "d": "Incorrect. The keyword 'array' is not used in C for array declaration."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. What will be the output of the following code?\nint arr[3] = {1, 2, 3};\nprintf(\"%d\", arr[3]);",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "Undefined/garbage value"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. arr[3] is out of bounds; it does not refer to the first element.",
+        "b": "Incorrect. arr[3] is out of bounds; it does not refer to the second element.",
+        "c": "Incorrect. arr[3] is out of bounds; it does not refer to the third element.",
+        "d": "Correct. Accessing arr[3] is out of bounds and results in undefined or garbage value."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which of the following best describes the time complexity of accessing an element in an array by index?",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(n)",
+        "c": "O(log n)",
+        "d": "O(n^2)"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Accessing an element by index in an array is a constant time operation, O(1).",
+        "b": "Incorrect. O(n) would be for operations like searching in an unsorted array.",
+        "c": "Incorrect. O(log n) is for binary search, not direct access.",
+        "d": "Incorrect. O(n^2) is not relevant for array access."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
