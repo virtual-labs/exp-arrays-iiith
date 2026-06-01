@@ -80,18 +80,7 @@ window.view = {
         var btn = document.getElementById("2DbtnOK");
         var style = window.getComputedStyle(btn);
         var rect = btn.getBoundingClientRect();
-        console.log(
-          "[LOG] disableButton 2DbtnOK: disabled",
-          btn.disabled,
-          "display",
-          style.display,
-          "opacity",
-          style.opacity,
-          "pointer-events",
-          style.pointerEvents,
-          "rect",
-          rect,
-        );
+        //console.log("[LOG] disableButton 2DbtnOK: disabled", btn.disabled, "display", style.display, "opacity", style.opacity, "pointer-events", style.pointerEvents, "rect", rect, );
       }, 0);
     }
   },
@@ -103,61 +92,45 @@ window.view = {
         var btn = document.getElementById("2DbtnOK");
         var style = window.getComputedStyle(btn);
         var rect = btn.getBoundingClientRect();
-        console.log(
-          "[LOG] enableButton 2DbtnOK: disabled",
-          btn.disabled,
-          "display",
-          style.display,
-          "opacity",
-          style.opacity,
-          "pointer-events",
-          style.pointerEvents,
-          "rect",
-          rect,
-        );
+        // console.log( "[LOG] enableButton 2DbtnOK: disabled", btn.disabled, "display", style.display, "opacity", style.opacity, "pointer-events", style.pointerEvents, "rect", rect, );
       }, 0);
     }
   },
   addClickEvent: function (id, method) {
     var element = document.getElementById(id);
     if (!element) {
-      console.log("[LOG] addClickEvent: Element with id", id, "not found");
+      // console.log("[LOG] addClickEvent: Element with id", id, "not found");
       return;
     }
     element.addEventListener(
       "click",
       function (e) {
-        console.log(
-          "[LOG] Click event on",
-          id,
-          "isMobile:",
-          window.matchMedia && window.matchMedia("(max-width: 600px)").matches,
-        );
+        // console.log( "[LOG] Click event on", id, "isMobile:", window.matchMedia && window.matchMedia("(max-width: 600px)").matches, );
         method(e);
       },
       false,
     );
-    console.log("[LOG] addClickEvent: Bound click for", id);
+    // console.log("[LOG] addClickEvent: Bound click for", id);
   },
   activateEvents: function () {
     this.addClickEvent("2DbtnOK", function () {
-      console.log("[LOG] 2DbtnOK handler called");
+      //    console.log("[LOG] 2DbtnOK handler called");
       view.getRowsAndCols();
     });
     this.addClickEvent("generateA", function () {
-      console.log("[LOG] generateA handler called");
+      //    console.log("[LOG] generateA handler called");
       view.generateFirstMatrixElements();
     });
     this.addClickEvent("generateB", function () {
-      console.log("[LOG] generateB handler called");
+      //    console.log("[LOG] generateB handler called");
       view.generateSecondMatrixElements();
     });
     this.addClickEvent("btnStart2D", function () {
-      console.log("[LOG] btnStart2D handler called");
+      //    console.log("[LOG] btnStart2D handler called");
       view.generateMatrices();
     });
     this.addClickEvent("btnNext2D", function () {
-      console.log("[LOG] btnNext2D handler called");
+      //    console.log("[LOG] btnNext2D handler called");
       view.multiplyMatrices();
     });
   },
@@ -169,33 +142,24 @@ window.view = {
     this.changeClass("2-dArray", "show");
   },
   getRowsAndCols: function () {
-    console.log("[LOG] getRowsAndCols called");
+    //  console.log("[LOG] getRowsAndCols called");
     var row = Number(document.getElementById("row").value);
     var col = Number(document.getElementById("col").value);
     var feedbackPanel = document.getElementById("feedbackPanel");
     var isMobile =
       window.matchMedia && window.matchMedia("(max-width: 600px)").matches;
-    console.log(
-      "[LOG] getRowsAndCols: row",
-      row,
-      "col",
-      col,
-      "isMobile",
-      isMobile,
-      "matrixCount",
-      this.matrixCount,
-    );
+    // console.log( "[LOG] getRowsAndCols: row", row, "col", col, "isMobile", isMobile, "matrixCount", this.matrixCount, );
     if (row === 0 || col === 0) {
       if (feedbackPanel)
         feedbackPanel.innerText =
           "Please enter both row and column values greater than 0.";
       else alert("Enter Matrix Size First !");
-      console.log("[LOG] getRowsAndCols: Invalid input (zero)");
+      // console.log("[LOG] getRowsAndCols: Invalid input (zero)");
     } else if (isNaN(row) || isNaN(col)) {
       if (feedbackPanel)
         feedbackPanel.innerText = "Matrix size must be an integer value!";
       else alert("Matrix Size Must Be An Integer Value !");
-      console.log("[LOG] getRowsAndCols: Invalid input (NaN)");
+      // console.log("[LOG] getRowsAndCols: Invalid input (NaN)");
     } else {
       if (feedbackPanel) feedbackPanel.innerText = "";
       if (this.matrixCount === 1) {
@@ -203,36 +167,26 @@ window.view = {
         this.changeClass("generateA", "button GenerateValueButton");
         this.rowsA = row;
         this.colsA = col;
-        console.log(
-          "[LOG] getRowsAndCols: Enabled generateA, rowsA",
-          this.rowsA,
-          "colsA",
-          this.colsA,
-        );
+        //    console.log( "[LOG] getRowsAndCols: Enabled generateA, rowsA", this.rowsA, "colsA", this.colsA, );
       } else {
         this.enableButton("generateB");
         this.changeClass("generateB", "button GenerateValueButton");
         this.rowsB = row;
         this.colsB = col;
-        console.log(
-          "[LOG] getRowsAndCols: Enabled generateB, rowsB",
-          this.rowsB,
-          "colsB",
-          this.colsB,
-        );
+        //    console.log( "[LOG] getRowsAndCols: Enabled generateB, rowsB", this.rowsB, "colsB", this.colsB, );
       }
       // On mobile, do not disable OK button
       if (!isMobile) {
         this.disableButton("2DbtnOK");
         this.changeClass("2DbtnOK", "startButton disableButton");
-        console.log("[LOG] getRowsAndCols: Disabled 2DbtnOK (desktop)");
+        //  console.log("[LOG] getRowsAndCols: Disabled 2DbtnOK (desktop)");
       } else {
         this.enableButton("2DbtnOK");
         this.changeClass("2DbtnOK", "button startButton");
-        console.log("[LOG] getRowsAndCols: Kept 2DbtnOK enabled (mobile)");
+        //  console.log("[LOG] getRowsAndCols: Kept 2DbtnOK enabled (mobile)");
       }
     }
-    console.log("[LOG] getRowsAndCols exit");
+    //  console.log("[LOG] getRowsAndCols exit");
   },
   resetRowsAndCols: function () {
     document.getElementById("row").value = this.colsA;
@@ -547,20 +501,9 @@ window.onload = function () {
     if (btn) {
       var style = window.getComputedStyle(btn);
       var rect = btn.getBoundingClientRect();
-      console.log(
-        "[LOG] onload 2DbtnOK: disabled",
-        btn.disabled,
-        "display",
-        style.display,
-        "opacity",
-        style.opacity,
-        "pointer-events",
-        style.pointerEvents,
-        "rect",
-        rect,
-      );
+      //console.log("[LOG] onload 2DbtnOK: disabled", btn.disabled, "display", style.display,"opacity", style.opacity, "pointer-events", style.pointerEvents, "rect", rect, );
     } else {
-      console.log("[LOG] onload 2DbtnOK: not found");
+      //console.log("[LOG] onload 2DbtnOK: not found");
     }
   }, 0);
 };
