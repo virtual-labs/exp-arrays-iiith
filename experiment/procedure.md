@@ -14,6 +14,9 @@
 5.  Press Start to start the experiment.
 6.  Click Next to get a step by step execution of the code.
 
+**Note for Mobile Users:**
+
+This simulation is optimized for desktop computers with larger screens and mouse interaction. If you access this experiment on a mobile device, please rotate your device to **landscape mode** for the best experience. Some features may be limited or harder to use on small screens.
 
 #### Manual
 
